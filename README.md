@@ -36,11 +36,11 @@ As a malware analyst, I store various malware samples on my machine. Some of the
 ### Uninstalling the Driver
 1. Stop the driver:
    ```bash
-   sc stop DirAntiExecute
+   sc stop MalwareAntiExecuteFinal
    ```
 2. Delete the driver service:
    ```bash
-   sc delete DirAntiExecute
+   sc delete MalwareAntiExecuteFinal
    ```
 
 ## Configuration
