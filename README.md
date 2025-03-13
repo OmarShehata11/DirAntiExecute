@@ -23,18 +23,15 @@ As a malware analyst, I store various malware samples on my machine. Some of the
    git clone https://github.com/OmarShehata11/DirAntiExecute.git
    ```
 2. Open the project in Visual Studio with the WDK installed.
-3. Build the project in Release mode.
+3. Build the project in Release mode ( or in debug mode if you want to see the debug output).
 
 ### Installing the Driver
-1. Open a command prompt as Administrator.
-2. Use the `sc` command to install the driver:
+1. install the driver using the INF file within the compiled code
+2. Start the driver:
    ```bash
-   sc create DirAntiExecute type= kernel binPath= "C:\path\to\DirAntiExecute.sys"
+   sc start MalwareAntiExecuteFinal
    ```
-3. Start the driver:
-   ```bash
-   sc start DirAntiExecute
-   ```
+> NOTE: you can change the service name by modifying the INF file, for me I named it MalwareAntiExecuteFinal.
 
 ### Uninstalling the Driver
 1. Stop the driver:
